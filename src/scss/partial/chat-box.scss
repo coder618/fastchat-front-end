@@ -132,4 +132,14 @@ form.add-message {
         display: inline-block;
         border-radius: 4px;
     }
+
+    &.my-message {
+        padding-right: 50px;
+        align-items: flex-end;
+        .userImageCircle {
+            top: 30px;
+            right: 0;
+            left: unset;
+        }
+    }
 }

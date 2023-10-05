@@ -15,7 +15,6 @@ export default function Home() {
     const [currentUserData, setUserData] = useState({});
     const [modalStatus, setModalStatus] = useState(false);
     const [currentRoom, setCurrentRoom] = useState("general");
-    const [userList, setUserList] = useState([]);
 
     const [globalMessageArray, setGlobalMessageArray] = useState([]);
     const [filteredMessageArray, setFilteredMessageArray] = useState([]);
@@ -141,7 +140,11 @@ export default function Home() {
             <div className="container-fluid">
                 <div className="main-columns-container">
                     <RoomList setCurrentRoom={setCurrentRoom} currentRoom={currentRoom} />
-                    <ChatBox messageArray={filteredMessageArray} sendMessage={sendMessage} />
+                    <ChatBox
+                        messageArray={filteredMessageArray}
+                        sendMessage={sendMessage}
+                        currentUserData={currentUserData}
+                    />
                     <UserList filteredMessageArray={filteredMessageArray} />
                 </div>
             </div>

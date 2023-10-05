@@ -1,8 +1,12 @@
 import Gravatar from "react-gravatar";
 
-function EachMessage({ messageObj }) {
+function EachMessage({ messageObj, currentUserData }) {
+    const userEmail = messageObj.currentUserData.userEmail;
+    const componentClass = `each-message ${
+        userEmail == currentUserData.userEmail ? "my-message" : ""
+    }`;
     return (
-        <div className="each-message">
+        <div className={componentClass}>
             <div className="userImageCircle">
                 <Gravatar email={messageObj.currentUserData.userEmail} />
             </div>

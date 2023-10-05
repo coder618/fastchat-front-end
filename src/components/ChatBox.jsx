@@ -3,7 +3,7 @@ import AddMessage from "./AddMessage";
 import EachMessage from "./EachMessage";
 import { v4 as uuid } from "uuid";
 
-export default function ChatBox({ sendMessage, messageArray }) {
+export default function ChatBox({ sendMessage, messageArray, currentUserData }) {
     useEffect(() => {
         const el = document.getElementById("all-messages-container");
         el.scrollTop = el.scrollHeight;
@@ -18,7 +18,12 @@ export default function ChatBox({ sendMessage, messageArray }) {
                 <div className="all-messages" id="all-messages-container">
                     {messageArray.map((messageObj) => {
                         return (
-                            <EachMessage data-id={uuid()} key={uuid()} messageObj={messageObj} />
+                            <EachMessage
+                                currentUserData={currentUserData}
+                                data-id={uuid()}
+                                key={uuid()}
+                                messageObj={messageObj}
+                            />
                         );
                     })}
                 </div>
