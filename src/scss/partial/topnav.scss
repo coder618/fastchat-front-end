@@ -1,0 +1,75 @@
+.top-nav-wrapper {
+    padding: 8px;
+    z-index: 1000;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+.userImageCircle {
+    img {
+        width: 35px;
+        max-width: 35px;
+        height: 35px;
+        max-height: 35px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+}
+.top-nav {
+    background: $primary;
+    border-radius: 8px;
+    color: #fff;
+    padding: 0;
+    display: flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    min-height: 55px;
+    align-items: center;
+    width: 100%;
+    .branding {
+        font-size: 25px;
+        border-right: 1px solid #ccc;
+        padding-right: 18px;
+        color: #fff;
+    }
+    .logout-btn {
+        background: #ff5a5a;
+        padding: 5px 14px;
+        font-weight: 500;
+        color: #fff;
+    }
+
+    .left-part {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        .welcome-message {
+            padding: 0 0 0 15px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+    }
+
+    .right-part {
+        display: flex;
+        align-items: center;
+        .connection-status {
+            margin-right: 10px;
+        }
+
+        .not-connected {
+            display: flex;
+            align-items: center;
+            p {
+                margin: 0 10px 0 0;
+            }
+            img {
+                width: 20px;
+                height: auto;
+            }
+        }
+    }
+}

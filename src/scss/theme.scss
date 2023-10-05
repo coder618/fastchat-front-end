@@ -1,0 +1,57 @@
+@import "./partial/theme-variables.scss";
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../../node_modules/bootstrap-icons/font/bootstrap-icons.css";
+@import "./partial/topnav.scss";
+@import "./partial/room-list.scss";
+@import "./partial/footer.scss";
+@import "./partial/chat-box.scss";
+@import "./partial/user-list";
+@import "./partial/modal.scss";
+
+body.page-project-detail {
+}
+
+body {
+    padding-top: 80px;
+    background-color: #f0f3f8;
+}
+
+.main-columns-container {
+    display: flex;
+}
+
+.each-column {
+    width: 380px;
+    min-width: 380px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 0 2px rgba(96, 128, 160, 0.3);
+    height: calc(100vh - 170px);
+    overflow: hidden;
+    h2 {
+        font-weight: 600;
+        font-size: 16px;
+        margin: 0;
+        color: #111;
+    }
+
+    .column-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: rgb(96, 128, 160);
+        font-size: 13px;
+        border-bottom: 1px solid rgb(230, 235, 240);
+        height: 55px;
+        padding: 5px 20px;
+    }
+    .column-content {
+        height: calc(100% - 55px);
+        overflow-y: auto;
+    }
+}
+
+#root {
+    width: 100%;
+}
