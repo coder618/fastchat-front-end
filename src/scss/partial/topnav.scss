@@ -72,4 +72,42 @@
             }
         }
     }
+
+    @media only screen and (max-width: 1200px) {
+        .left-part {
+            .welcome-message {
+                display: none;
+            }
+        }
+        .right-part {
+            .connection-status,
+            .not-connected {
+                display: none;
+            }
+        }
+        .branding {
+            font-size: 20px;
+        }
+        .on-mobile-status {
+        }
+    }
+}
+.on-mobile-status {
+    display: none;
+    @media only screen and (max-width: 1200px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0px 15px 20px 15px;
+        .not-connected {
+            width: 100%;
+            .badge {
+                width: 100%;
+                font-size: 18px;
+                img {
+                    width: 25px;
+                }
+            }
+        }
+    }
 }

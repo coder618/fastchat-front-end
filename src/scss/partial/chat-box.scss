@@ -1,6 +1,12 @@
-.chat-box {
+div.each-column.chat-box {
     flex-grow: 1;
     margin: 0 20px;
+
+    @media only screen and (max-width: 1200px) {
+        margin: 0 0 20px 0;
+        order: 3;
+        height: 600px;
+    }
 
     .column-content {
         display: flex;
@@ -70,6 +76,10 @@ form.add-message {
         i {
             display: none;
         }
+    }
+    @media only screen and (max-width: 1200px) {
+        min-height: 80px;
+        padding: 12px;
     }
 }
 

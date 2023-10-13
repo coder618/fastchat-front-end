@@ -19,6 +19,10 @@ body {
 
 .main-columns-container {
     display: flex;
+
+    @media only screen and (max-width: 1200px) {
+        flex-direction: column;
+    }
 }
 
 .each-column {
@@ -49,6 +53,14 @@ body {
     .column-content {
         height: calc(100% - 55px);
         overflow-y: auto;
+    }
+
+    @media only screen and (max-width: 1200px) {
+        min-width: 100%;
+        max-width: 100%;
+        width: 100%;
+        margin: 0 0 20px 0;
+        height: 400px;
     }
 }
 
