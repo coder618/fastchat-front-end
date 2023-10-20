@@ -47,7 +47,7 @@ export default function UserList({ filteredMessageArray }) {
                 {userArray.map((item) => {
                     return (
                         <>
-                            <div className="each-user">
+                            <div className="each-user" key={item.email}>
                                 <Gravatar email={item.email} />
                                 <div>
                                     <p className="name">{item.name}</p>
