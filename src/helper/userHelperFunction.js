@@ -1,6 +1,6 @@
 // This function will return user name and email from saved data
 function getSavedUser() {
-    let output = false;
+    let output = {};
 
     const userName = localStorage.getItem("quickChatUserName");
     const userEmail = localStorage.getItem("quickChatUserEmail");

@@ -48,9 +48,14 @@ export default function Home() {
     useEffect(() => {
         const savedUser = getSavedUser();
         // console.log("Saved user >> ", savedUser);
-        if (savedUser) {
+        if (
+            savedUser &&
+            "userName" in savedUser &&
+            "userEmail" in savedUser &&
+            savedUser.userEmail &&
+            savedUser.userName
+        ) {
             setUserData(savedUser);
-
             setModalStatus(false);
         } else {
             setModalStatus(true);
