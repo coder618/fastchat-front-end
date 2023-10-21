@@ -9,7 +9,8 @@ export default function UserList({ filteredMessageArray }) {
     useEffect(() => {
         const output = [];
 
-        const reversedArray = filteredMessageArray.reverse();
+        // const reversedArray = filteredMessageArray.reverse();
+        const reversedArray = filteredMessageArray;
 
         for (let i = 0; i < reversedArray.length; i++) {
             const currentMessage = reversedArray[i];
